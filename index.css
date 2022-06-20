@@ -1,0 +1,89 @@
+#app {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#inp {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;    
+}
+
+#general-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#general-actions button {
+    border: 2px black solid;
+    width: 110%;
+    height: 20%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.matrix {
+    text-align: center;
+}
+
+.matrix-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10% auto;
+    width: 90%;
+}
+
+.matrix-content mo {
+    transform: scale(2, 8);
+}
+.matrix-content table {
+    font-size: 16pt;
+    width: 90%;
+}
+
+#result {
+    text-align: center;
+}
+
+#result table{
+    font-size: 16pt;
+    width: 15%;
+    margin: 0 auto 0 auto;
+}
+
+.matrix-info {
+    text-align: left;
+    font-weight: bold;
+}
+
+.matrix-size {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10%;
+}
+.matrix-size span{
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.matrix-size button {
+    width: 45%;
+}
+
+.size {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.matrix-actions {
+    display: flex;
+    justify-content: space-around;
+}

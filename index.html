@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <title>matrix</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="inp">
+	<div id="m1" class="matrix">
+	  <h2>Matrix А</h2>
+	  <div class="matrix-content">
+	    <mo>(</mo>
+	    <table>
+	      <tr><td>1</td><td>2</td><td>5</td></tr>
+	      <tr><td>0</td><td>5</td><td>5</td></tr>
+	      <tr><td>0</td><td>5</td><td>5</td></tr>
+	      <tr><td>0</td><td>5</td><td>5</td></tr>
+	    </table>
+	    <mo>)</mo>
+	  </div>
+	  <div class="matrix-size">
+	    <div class="size"><button>-</button><span class="m">{{m}}</span><button>+</button></div> x
+	    <div class="size"><button>-</button><span class="n">{{n}}</span><button>+</button></div>
+	  </div>
+	  <div class="matrix-actions">
+	      <button>A<sup>-1</sup></button>
+      	      <button>A<sup>T</sup></button>
+	  </div>
+	  <div class="matrix-info">
+	    <p>det A = {{det}}</p>
+	    <p>rang A = {{rang}}</p>
+	  </div>
+	</div>
+	<div id="general-actions">
+	  <button>+</button>
+	  <button>-</button>
+      	  <button>*</button>
+	</div>
+	<div id="m2" class="matrix">
+	  <h2>Matrix B</h2>
+	  <table>
+	    <tr><td>1</td><td>0</td></tr>
+	    <tr><td>0</td><td>1</td></tr>
+	  </table>
+	</div>
+      </div>
+      <hr>
+      <div id="result">
+	<h2>Matrix {{expr}}</h2>
+	<table>
+	  <tr><td>1</td><td>0</td></tr>
+	  <tr><td>0</td><td>1</td></tr>
+	</table>
+    </div>
+    </div>
+  </body>
+</html>
