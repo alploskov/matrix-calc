@@ -1,3 +1,6 @@
+body {
+    margin 0;
+}
 #app {
     max-width: 75%;
     margin-left: auto;
@@ -43,8 +46,19 @@
     transform: scale(2, 8);
 }
 .matrix-content table {
-    font-size: 16pt;
     width: 90%;
+}
+
+.matrix-content table tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.matrix-content table tr td input {
+    max-width: 40px;
+    font-size: 12pt;
+    text-align: center;
+    padding: 0;
 }
 
 #result {
