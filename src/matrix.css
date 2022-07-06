@@ -1,0 +1,32 @@
+.matrix {
+    text-align: center;
+}
+.size button {
+    width: 100%;
+}
+.matrix-info {
+    text-align: left;
+    font-weight: bold;
+}
+
+.matrix-size {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10%;
+}
+.matrix-size span{
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.size {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.matrix-actions {
+    display: flex;
+    justify-content: space-around;
+}

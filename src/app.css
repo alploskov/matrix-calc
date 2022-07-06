@@ -1,0 +1,60 @@
+#app {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#inp {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#general-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#general-actions button {
+    border: 2px black solid;
+    width: 110%;
+    height: 20%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.matrix-content table tr td input {
+    max-width: 40px;
+    font-size: 12pt;
+    text-align: center;
+    padding: 0;
+}
+
+#result {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#result table{
+    font-size: 16pt;
+}
+
+
+@media screen and (max-width: 600px) {
+    #inp {
+	flex-direction: column;
+    }
+    #general-actions {
+	flex-direction: initial;
+	justify-content: space-between;
+	margin: auto 0 auto 0;
+    }
+    #general-actions button {
+	width: 30%;
+    }
+}
