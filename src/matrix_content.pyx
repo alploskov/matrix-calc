@@ -1,22 +1,34 @@
 import React
+from matrix_provider import MatrixContext
 
 
 @do
-def MatrixContent(m, n, content):
+def MatrixContent(name):
+    ctx = React.useContext(MatrixContext)
+    M = getattr(ctx, name)
     input_style = {
         'max-width': '40px',
         'font-size': '12pt',
         'text-align': 'center',
         'padding': 0
     }
+    def change_item(m, n):
+        def _(e):
+            ctx.change_item(
+                name, m, n,
+                float(e.target.value)
+            )
+        return _
     rows = []
-    for _m in range(m):
+    for _m in range(len(M)):
         row = []
-        for _n in range(n):
+        for _n in range(len(M[0])):
             row.append(
                 <td><input
                   style={input_style}
-                  value={content[_m][_n]} />
+                  value={M[_m][_n]}
+                  onChange={change_item(_m, _n)}
+                />
                 </td>
             )
         rows.append(<tr>{row}</tr>)
@@ -28,7 +40,7 @@ def MatrixContent(m, n, content):
         'width': '90%'
     }
     border_style = {
-        'transform': 'scale(2, ' + str(m * 2) + ')'
+        'transform': 'scale(2, ' + str(len(M) * 2) + ')'
     }
     return (
         <div style={content_style}>
