@@ -18,7 +18,7 @@ def Matrix(name):
               <button onClick={ctx.remove_row(name)}>-</button>
               <span>{len(ctx[name])}</span>
               <button onClick={ctx.add_row(name)}>+</button>
-            </div> x <div className="size">
+            </div><div className="size_sep">x</div> <div className="size">
               <button onClick={ctx.remove_column(name)}>-</button>
               <span>{len(ctx[name][0])}</span>
               <button onClick={ctx.add_column(name)}>+</button>
@@ -26,7 +26,7 @@ def Matrix(name):
 	  </div>
 	  <div className="matrix-actions">
 	      <button>{name}<sup>-1</sup></button>
-      	      <button>{name}<sup>T</sup></button>
+      	      <button onClick={ctx.transponse(name)}>{name}<sup>T</sup></button>
 	  </div>
 	  <div className="matrix-info">
 	    <p>det {name} = {det}</p>

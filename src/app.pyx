@@ -6,7 +6,6 @@ style('./app.css')
 
 
 def App():
-    action, set_action = use_state('+')
     ctx = React.useContext(MatrixContext)
     return (
           <div id="app">
@@ -22,7 +21,7 @@ def App():
             <hr />
             <div id="result">
               <h2>
-                Matrix A{action}B
+                Matrix A{ctx.op}B
               </h2>
               <MatrixContent name="res" />
             </div>

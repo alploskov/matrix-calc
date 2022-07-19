@@ -27,7 +27,7 @@ def MatrixContent(name):
                 <td><input
                   style={input_style}
                   value={M[_m][_n]}
-                  onChange={change_item(_m, _n)}
+                  onChange={change_item(_m, _n) if name != 'res' else ''}
                 />
                 </td>
             )
