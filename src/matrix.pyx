@@ -8,7 +8,6 @@ style('./matrix.css')
 def Matrix(name):
     ctx = React.useContext(MatrixContext)    
     rang = 0
-    det = 0
     return (
         <div className="matrix">
 	  <h2>Matrix {name}</h2>
@@ -29,7 +28,7 @@ def Matrix(name):
       	      <button onClick={ctx.transponse(name)}>{name}<sup>T</sup></button>
 	  </div>
 	  <div className="matrix-info">
-	    <p>det {name} = {det}</p>
+	    <p>det {name} = {ctx['det' + name]}</p>
 	    <p>rang {name} = {rang}</p>
 	  </div>
         </div>
